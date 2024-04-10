@@ -1,13 +1,16 @@
 package com.aluracursos.conversormoneda.models;
 
-import java.time.LocalDateTime;
+import com.google.gson.FieldNamingPolicy;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+
 
 public class CurrencyConversion {
     private String fromCountry;
     private String toCountry;
     private Double amount;
     private Double amountConverted;
-    private LocalDateTime createdAt;
+    private String createdAt;
 
     public String getFromCountry() {
         return fromCountry;
@@ -41,22 +44,31 @@ public class CurrencyConversion {
         this.amountConverted = amountConverted;
     }
 
-    public LocalDateTime getCreatedAt() {
+    public String getCreatedAt() {
         return createdAt;
     }
 
-    public void setCreatedAt(LocalDateTime createdAt) {
+    public void setCreatedAt(String createdAt) {
         this.createdAt = createdAt;
+    }
+
+    public CurrencyConversion setValues (CurrencyConversion converter) {
+        this.createdAt = converter.getCreatedAt();
+        this.amount = converter.getAmount();
+        this.toCountry = converter.getToCountry();
+        this.fromCountry = converter.getFromCountry();
+        this.amountConverted = converter.getAmountConverted();
+
+        return this;
     }
 
     @Override
     public String toString() {
-        return "CurrencyConversion{" +
-                "fromCountry='" + fromCountry + '\'' +
-                ", toCountry='" + toCountry + '\'' +
-                ", amount=" + amount +
-                ", amountConverted=" + amountConverted +
-                ", createdAt=" + createdAt +
-                '}';
+        Gson gson = new GsonBuilder()
+                .setFieldNamingPolicy(FieldNamingPolicy.UPPER_CAMEL_CASE)
+                .setPrettyPrinting()
+                .create();
+
+        return gson.toJson(this);
     }
 }

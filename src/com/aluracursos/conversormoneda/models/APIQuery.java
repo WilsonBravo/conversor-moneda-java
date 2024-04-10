@@ -40,7 +40,7 @@ public class APIQuery {
         double conversionResult = jsonObject.get("conversion_result").getAsDouble();
 
         converter.setAmountConverted(conversionResult);
-        converter.setCreatedAt(LocalDateTime.now());
+        converter.setCreatedAt(LocalDateTime.now().toString());
 
     }
 
