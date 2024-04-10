@@ -1,17 +1,17 @@
 # Java Currency Converter
 
-Este es un proyecto para el programa ONE G6 junto con Alura LATAM para la especialización BackEnd con Java. 
-El objetivo de este proyecto es desarrollar un conversor de divisa, en mi desarrollo, el conversor cuenta con diferentes funciones, incluyendo las siguientes:
+This is a project for the ONE G6 program in collaboration with Alura LATAM for the Backend specialization with Java.
+The objective of this project is to develop a currency converter. In my development, the converter includes the following functions:
 
-    1- Convertir cantidad de una divisa a otra (Ej: 436000.0 COP a USD).
-    2- Ver los códigos ISO que se pueden convertir (Ej: COP, USD, JPY).
-    3- Ver la taza de cambio actual de una moneda (Ej: COP).
-    4- Ver información del país a partir del código ISO de su moneda (Ej: COP -> Colombia).
-    5- Ver tu historial de conversiones.
+    1- Convert an amount from one currency to another (e.g., 436000.0 COP to USD).
+    2- View the ISO codes that can be converted (e.g., COP, USD, JPY).
+    3- View the current exchange rate of a currency (e.g., COP).
+    4- View country information based on the ISO code of its currency (e.g., COP -> Colombia).
+    5- View your conversion history.
 
-El menú de opciones está disponible en inglés y español.
+The menu of options is available in both English and Spanish.
 
-Se hizo uso de la API [ExchangeRate-API](https://www.exchangerate-api.com/) para obtener la tasa de cambio de los valores de divisa y así mismo mostrar un listado de las monedas disponibles para la conversión. En este caso se realizó una petición GET al enlace https://open.er-api.com/v6/latest/COP, en dónde COP representa el código ISO de la moneda de Colombia, obteniendo así la siguiente respuesta.
+The [ExchangeRate-API](https://www.exchangerate-api.com/) was used to obtain the exchange rate values for currency conversion and to display a list of available currencies for conversion. In this case, a GET request was made to the link https://open.er-api.com/v6/latest/COP, where COP represents the ISO code for the currency of Colombia, obtaining the following response.
 
     {
         "result": "success",
@@ -35,7 +35,7 @@ Se hizo uso de la API [ExchangeRate-API](https://www.exchangerate-api.com/) para
     }
 
 
-Por otra parte, se hizo uso de la API [REST Countries](https://restcountries.com/) para obtener información de un país a partir del código ISO de su moneda. En este caso se realizó una petición GET al enlace https://restcountries.com/v3.1/currency/COP?fields=name,capital,currencies,population,flags,timezones, el cual cuenta con un filtrado por campos para evitar obtener una respuesta demasiado extensa.
+Furthermore, the [REST Countries](https://restcountries.com/) API was used to obtain information about a country based on the ISO code of its currency. In this case, a GET request was made to the link https://restcountries.com/v3.1/currency/COP?fields=name,capital,currencies,population,flags,timezones, which includes field filtering to avoid obtaining an overly extensive response.
 
     [
         {
@@ -72,43 +72,43 @@ Por otra parte, se hizo uso de la API [REST Countries](https://restcountries.com
 
 ************************************************************
 
-Una vez iniciado el programa, se le presenta al usuario la opción de elegir entre idioma español o inglés a través del siguiente texto:
+Once the program starts, the user is presented with the option to choose between Spanish or English language through the following text:
 
     Para iniciar el programa en idioma español ingrese 'español'.
     To start the program in English language enter 'english'.
 
-Seguidamente se presenta el menu con las funcionalidades:
+Subsequently, the menu with the functionalities is presented:
 
     ************************************************************
-    Bienvenido/a al conversor de divisa!
-    Escoja una de las opciones:
+    Welcome to the currency converter!
+    Please choose one of the following options:
 
-        1- Convertir cantidad de una divisa a otra (Ej: 436000.0 COP a USD).
-        2- Ver los códigos ISO que se pueden convertir (Ej: COP, USD, JPY).
-        3- Ver la taza de cambio actual de una moneda (Ej: COP).
-        4- Ver información del país a partir del código ISO de su moneda (Ej: COP -> Colombia).
-        5- Ver tu historial de conversiones.
+        1- Convert an amount from one currency to another (e.g., 436000.0 COP to USD).
+        2- View the ISO codes that can be converted (e.g., COP, USD, JPY).
+        3- View the current exchange rate of a currency (e.g., COP).
+        4- View country information based on the ISO code of its currency (e.g., COP -> Colombia).
+        5- View your conversion history.
 
-    Para finalizar el programa, por favor ingrese 'salir'.
+    To exit the program, please enter 'exit'.
     ************************************************************
 
-A continuación se presenta un ejemplo de uso.
+Next, an example of usage is presented.
 
 ************************************************************
-### 1. Convertir cantidad de una divisa a otra (Ej: 436000.0 COP a USD).
+### 1. Convert an amount from one currency to another (e.g., 436000.0 COP to USD).
 
-    Ingresa el código ISO de la moneda de origen (Ej: COP).
+    Enter the ISO code of the source currency (e.g., COP).
     COP
-    Ingresa el código ISO de la moneda de destino (Ej: USD).
+    Enter the ISO code of the target currency (e.g., USD).
     USD
-    Ingresa la cantidad para el cambio de divisa (Ej. 436000.0).
+    Enter the amount for currency exchange (e.g., 436000.0).
     25500
-    Resultado: 6.78402 USD
-    Para ver el historial de conversiones puede ingresar la opción 5.
-    Ingrese una nueva opción, o ingrese 'salir' para finalizar el programa.
+    Result: 6.78402 USD
+    To view conversion history, you can enter option 5.
+    Enter a new option, or enter 'exit' to end the program.
 
 ************************************************************   
-### 2. Ver los códigos ISO que se pueden convertir (Ej: COP, USD, JPY).
+### 2. View the ISO codes that can be converted (e.g., COP, USD, JPY).
 
         COP  AED  AFN  ALL  AMD  ANG  AOA  ARS  AUD  AWG
         AZN  BAM  BBD  BDT  BGN  BHD  BIF  BMD  BND  BOB
@@ -127,15 +127,16 @@ A continuación se presenta un ejemplo de uso.
         TTD  TVD  TWD  TZS  UAH  UGX  USD  UYU  UZS  VES
         VND  VUV  WST  XAF  XCD  XDR  XOF  XPF  YER  ZAR
         ZMW  ZWL
-
-    Para más información sobre el país de origen de cualquier moneda puede ingresar la opción 4.
-    Ingrese una nueva opción, o ingrese 'salir' para finalizar el programa.
+        
+    For more information about the country of origin for any currency, you can enter option 4.
+    Enter a new option, or enter 'exit' to end the program.
 
 ************************************************************   
-### 3. Ver la taza de cambio actual de una moneda (Ej: COP).
+### 3. View the current exchange rate of a currency (e.g., COP).
 
-    Ingresa el código ISO de la moneda (Ej: COP).
+    Enter the ISO code of the currency (e.g., COP).
     COP
+
         COP: 1.000000  AED: 0.000977  AFN: 0.018940  ALL: 0.025040  AMD: 0.103608  ANG: 0.000476
         AOA: 0.224613  ARS: 0.230054  AUD: 0.000403  AWG: 0.000476  AZN: 0.000452  BAM: 0.000479
         BBD: 0.000532  BDT: 0.029170  BGN: 0.000479  BHD: 0.000100  BIF: 0.765841  BMD: 0.000266
@@ -164,57 +165,57 @@ A continuación se presenta un ejemplo de uso.
         VND: 6.697849  VUV: 0.031980  WST: 0.000733  XAF: 0.160778  XCD: 0.000718  XDR: 0.000200
         XOF: 0.160778  XPF: 0.029249  YER: 0.066584  ZAR: 0.004938  ZMW: 0.006593  ZWL: 0.003601
 
-    Para realizar una conversión entre diferentes monedas puede ingresar la opción 1.
-    Ingrese una nueva opción, o ingrese 'salir' para finalizar el programa.
+    To perform a conversion between different currencies, you can enter option 1.
+    Enter a new option, or enter 'exit' to end the program.
 
 ************************************************************   
-### 4. Ver información del país a partir del código ISO de su moneda (Ej: COP -> Colombia).
+### 4. View country information based on the ISO code of its currency (e.g., COP -> Colombia).
 
-    Ingresa el código ISO de la moneda (Ej: COP).
+    Enter the ISO code of the currency (e.g., COP).
     COP
 
     {
-        "Name": {
+    "Name": {
         "Common": "Colombia",
         "Official": "Republic of Colombia",
         "NativeName": {
-            "spa": {
-                "Official": "República de Colombia",
-                "Common": "Colombia"
-            }
+        "spa": {
+            "Official": "República de Colombia",
+            "Common": "Colombia"
         }
-        },
-        "Flags": {
-            "Png": "https://flagcdn.com/w320/co.png",
-            "Svg": "https://flagcdn.com/co.svg",
-            "Alt": "The flag of Colombia is composed of three horizontal bands of yellow, blue and red, with the yellow band twice the height of the other two bands."
-        },
-        "Currencies": {
+        }
+    },
+    "Flags": {
+        "Png": "https://flagcdn.com/w320/co.png",
+        "Svg": "https://flagcdn.com/co.svg",
+        "Alt": "The flag of Colombia is composed of three horizontal bands of yellow, blue and red, with the yellow band twice the height of the other two bands."
+    },
+    "Currencies": {
         "COP": {
-            "Name": "Colombian peso",
-            "Symbol": "$"
+        "Name": "Colombian peso",
+        "Symbol": "$"
         }
-        },
-        "Capital": [
-            "Bogotá"
-        ],
-        "Population": 50882884,
-        "Timezones": [
-            "UTC-05:00"
-        ]
+    },
+    "Capital": [
+        "Bogotá"
+    ],
+    "Population": 50882884,
+    "Timezones": [
+        "UTC-05:00"
+    ]
     }
 
-    Ingrese una nueva opción, o ingrese 'salir' para finalizar el programa.
+    Enter a new option, or enter 'exit' to end the program.
 
 ************************************************************   
-### 5. Ver tu historial de conversiones.
+### 5. View your conversion history.
 
     [{
         "FromCountry": "COP",
         "ToCountry": "USD",
         "Amount": 25500.0,
         "AmountConverted": 6.78402,
-        "CreatedAt": "2024-04-10T15:29:21.169090600"
+        "CreatedAt": "2024-04-10T18:34:25.650916200"
     }]
-
-    Ingrese una nueva opción, o ingrese 'salir' para finalizar el programa.
+    
+    Enter a new option, or enter 'exit' to end the program.

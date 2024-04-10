@@ -6,11 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="98742dd0-7cdb-4ecf-90c0-2d9f702fee31" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README-en.md" beforeDir="false" afterPath="$PROJECT_DIR$/README-en.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/aluracursos/conversormoneda/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/aluracursos/conversormoneda/main/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/aluracursos/conversormoneda/models/APIQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/aluracursos/conversormoneda/models/APIQuery.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/aluracursos/conversormoneda/models/CurrencyConversion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/aluracursos/conversormoneda/models/CurrencyConversion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/aluracursos/conversormoneda/models/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/aluracursos/conversormoneda/models/Menu.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
