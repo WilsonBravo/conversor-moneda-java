@@ -1,6 +1,4 @@
-# Java Conversor de Divisa
-
-If you want to see the documentation in English, please go to the following link: [![en](https://github.com/WilsonBravo/conversor-moneda-java)
+# Java Currency Converter
 
 Este es un proyecto para el programa ONE G6 junto con Alura LATAM para la especialización BackEnd con Java. 
 El objetivo de este proyecto es desarrollar un conversor de divisa, en mi desarrollo, el conversor cuenta con diferentes funciones, incluyendo las siguientes:
